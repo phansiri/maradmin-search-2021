@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
+from celery.schedules import crontab
+
+import backend_project.tasks
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'maradmin_scraper',
     'backend_api.apps.BackendApiConfig',
     'graphene_django',
     'django_filters',
@@ -129,4 +133,14 @@ STATIC_URL = '/static/'
 
 GRAPHENE = {
     "SCHEMA": "backend_project.schema.schema"
+}
+
+CELERY_BROKER_URL = "redis://redis:6379"
+CELERY_RESULT_BACKEND = "redis://redis:6379"
+
+CELERY_BEAT_SCHEDULE = {
+    "sample_task": {
+        "task": "backend_project.tasks.sample_task",
+        "schedule": crontab(minute="*/1"),
+    },
 }

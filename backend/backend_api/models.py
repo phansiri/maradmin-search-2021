@@ -7,6 +7,8 @@ class Maradmin(models.Model):
     status = models.CharField(max_length=10)
     url_link = models.URLField(max_length=200)
     body = models.TextField()
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name = "Maradmin"
