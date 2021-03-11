@@ -138,9 +138,11 @@ GRAPHENE = {
 CELERY_BROKER_URL = "redis://redis:6379"
 CELERY_RESULT_BACKEND = "redis://redis:6379"
 
+
+# This is commented out in order to preserve resources but it works
 CELERY_BEAT_SCHEDULE = {
-    "sample_task": {
-        "task": "backend_project.tasks.sample_task",
-        "schedule": crontab(minute="*/1"),
-    },
+    # "maradmin_task": {
+    #     "task": "backend_project.tasks.maradmin_task",
+    #     "schedule": crontab(minute=30, hour=23), # daily at 23:30
+    # }
 }
