@@ -1,4 +1,6 @@
 .env
 .env.db
+.DS_Store
+.idea
 myvenv
 __pycache__

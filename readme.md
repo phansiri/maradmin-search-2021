@@ -37,6 +37,12 @@ docker-compose logs -f "celery"
 
 [IW]
 
+## Useful Commands
+1. `docker-compose exec web python manage.py createsuperuser`
+2. `docker-conpose exec web python manage.py maradmin_crawl` manually start web scraper
+3. `docker-conpose exec web python manage.py makemigrations`
+4. `docker-conpose exec web python manage.py migrate`
+
 ## Reference
 
 1. [https://www.fullstacklabs.co/blog/django-graphene-rest-graphql](https://www.fullstacklabs.co/blog/django-graphene-rest-graphql)
@@ -47,3 +53,6 @@ docker-compose logs -f "celery"
 6. [Django + Scrapy](https://ginopalazzo.github.io/scraper/django-scrapy.html)
 7. [Getting scrapy project settings when script is outside of root directory](https://stackoverflow.com/questions/31662797/getting-scrapy-project-settings-when-script-is-outside-of-root-directory)
 8. [Handling Periodic Tasks in Django with Celery and Docker](https://testdriven.io/blog/django-celery-periodic-tasks/)
+9. [Flutter - Instant search with Firestore](https://www.youtube.com/watch?v=0szEJiCUtMM)
+10. [Django Search + Flutter](https://medium.com/flutter-community/django-search-flutter-1cb3e8a5db1a)
+11. [How To Serve A Flutter Web App From A Docker Container](https://www.jarednelsen.dev/posts/how-to-serve-a-flutter-web-app-from-a-docker-container)

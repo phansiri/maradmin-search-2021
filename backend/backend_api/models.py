@@ -1,8 +1,8 @@
 from django.db import models
 
 class Maradmin(models.Model):
-    number = models.CharField(max_length=6)
-    title = models.CharField(max_length=200)
+    number = models.CharField(max_length=50)
+    title = models.CharField(max_length=300)
     date = models.DateField(auto_now=False, auto_now_add=False)
     status = models.CharField(max_length=10)
     url_link = models.URLField(max_length=200)

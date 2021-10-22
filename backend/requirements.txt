@@ -7,3 +7,4 @@ redis==3.5.3
 Scrapy==2.4.1
 scrapy-djangoitem==1.1.1
 html2text==2020.1.16
+django-cors-headers==3.7.0
