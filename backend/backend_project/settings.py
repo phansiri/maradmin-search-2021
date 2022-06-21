@@ -25,7 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("DJ_SECRET_KEY", default='Testing')
 DEBUG = os.environ.get("DJ_DEBUG", default=False)
 ALLOWED_HOSTS = os.environ.get("DJ_ALLOWED_HOSTS").split(" ")
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = ("http://localhost:8080", "http://localhost:8000")
 
 # Application definition
 

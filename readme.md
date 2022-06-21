@@ -4,7 +4,7 @@
 
 1. Django for the backend
 2. Graphql to provide an API endpoint
-3. Flutter for the frontend
+3. Vue3 for the frontend
 
 ## Graphql query string example
 
@@ -39,9 +39,9 @@ docker-compose logs -f "celery"
 
 ## Useful Commands
 1. `docker-compose exec web python manage.py createsuperuser`
-2. `docker-conpose exec web python manage.py maradmin_crawl` manually start web scraper
-3. `docker-conpose exec web python manage.py makemigrations`
-4. `docker-conpose exec web python manage.py migrate`
+2. `docker-compose exec web python manage.py maradmin_crawl` manually start web scraper
+3. `docker-compose exec web python manage.py makemigrations`
+4. `docker-compose exec web python manage.py migrate`
 
 ## Reference
 

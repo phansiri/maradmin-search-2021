@@ -16,5 +16,5 @@ class Maradmin(models.Model):
     def __str__(self):
         return self.number
 
-    def get_absolute_url(self):
-        return reverse("Maradmin_detail", kwargs={"pk": self.pk})
+    # def get_absolute_url(self):
+    #     return reverse("Maradmin_detail", kwargs={"pk": self.pk})

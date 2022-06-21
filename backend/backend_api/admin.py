@@ -4,3 +4,4 @@ from .models import Maradmin
 @admin.register(Maradmin)
 class MaradminAdmin(admin.ModelAdmin):
     list_display = ('number', 'title', 'date', 'status', 'url_link')
+    search_fields = ['number', 'title', 'body']

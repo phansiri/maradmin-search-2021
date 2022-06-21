@@ -34,7 +34,8 @@ class MaradminSpider(scrapy.Spider):
         ).getall()[-1]
         print('------------------')
         print(f'Selected Counter: {selected_counter}')
-        max_counter = int(selected_counter)
+        # max_counter = int(selected_counter)
+        max_counter = 2
         for num in range(2, max_counter + 1):
             print(f'Number: {num}')
             next_page_url = (
